@@ -1,0 +1,300 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep 24 21:44:48 2024
+# Process ID: 171451
+# Current directory: /home/skravitz/project_1/project_1.runs/design_1_math_doer_0_5_synth_1
+# Command line: vivado -log design_1_math_doer_0_5.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_math_doer_0_5.tcl
+# Log file: /home/skravitz/project_1/project_1.runs/design_1_math_doer_0_5_synth_1/design_1_math_doer_0_5.vds
+# Journal file: /home/skravitz/project_1/project_1.runs/design_1_math_doer_0_5_synth_1/vivado.jou
+# Running On        :eecs-digital-28
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency     :3496.334 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :33324 MB
+# Swap memory       :8589 MB
+# Total Virtual     :41914 MB
+# Available Virtual :33686 MB
+#-----------------------------------------------------------
+source design_1_math_doer_0_5.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/ip_repo/math_doer_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/skravitz/ip_repo/do_math_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/skravitz/ip_repo/math_doer_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/ip_repo/math_doer_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/skravitz/ip_repo/math_doer_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/ip_repo/math_doer_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_math_doer_0_5
+Command: synth_design -top design_1_math_doer_0_5 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 171567
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2178.152 ; gain = 412.715 ; free physical = 15594 ; free virtual = 30712
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_math_doer_0_5' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'math_doer' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/hdl/math_doer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fir_15' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/43d0/fir_15.sv:1]
+INFO: [Synth 8-251] DONE! [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/43d0/fir_15.sv:54]
+WARNING: [Synth 8-6104] Input port 'm00_axis_aclk' has an internal driver [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/43d0/fir_15.sv:62]
+WARNING: [Synth 8-6104] Input port 'm00_axis_aresetn' has an internal driver [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/43d0/fir_15.sv:63]
+INFO: [Synth 8-6155] done synthesizing module 'fir_15' (0#1) [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/43d0/fir_15.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'math_doer' (0#1) [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ipshared/864f/hdl/math_doer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_math_doer_0_5' (0#1) [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[3] in module fir_15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[2] in module fir_15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module fir_15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module fir_15 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2269.121 ; gain = 503.684 ; free physical = 15494 ; free virtual = 30612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2283.965 ; gain = 518.527 ; free physical = 15494 ; free virtual = 30612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2283.965 ; gain = 518.527 ; free physical = 15494 ; free virtual = 30612
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2283.965 ; gain = 0.000 ; free physical = 15494 ; free virtual = 30612
+WARNING: [Netlist 29-1115] Found multi-term driver net: m00_axis_aclk.
+WARNING: [Netlist 29-1115] Found multi-term driver net: m00_axis_aresetn.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2433.715 ; gain = 0.000 ; free physical = 15484 ; free virtual = 30602
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2433.715 ; gain = 0.000 ; free physical = 15484 ; free virtual = 30602
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2433.715 ; gain = 668.277 ; free physical = 15488 ; free virtual = 30607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15488 ; free virtual = 30607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15488 ; free virtual = 30607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15488 ; free virtual = 30608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 12    
++---Registers : 
+	               32 Bit    Registers := 15    
+	                1 Bit    Registers := 31    
++---Multipliers : 
+	               2x32  Multipliers := 1     
+	               3x32  Multipliers := 2     
+	               5x32  Multipliers := 1     
+	               6x32  Multipliers := 1     
+	               7x32  Multipliers := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design design_1_math_doer_0_5 has port m00_axis_tstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design design_1_math_doer_0_5 has port m00_axis_tstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design design_1_math_doer_0_5 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design design_1_math_doer_0_5 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[3] in module design_1_math_doer_0_5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[2] in module design_1_math_doer_0_5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module design_1_math_doer_0_5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module design_1_math_doer_0_5 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15489 ; free virtual = 30608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15496 ; free virtual = 30615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15496 ; free virtual = 30615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15488 ; free virtual = 30608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin s00_axis_aclk with 1st driver pin 's00_axis_aclk' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin s00_axis_aclk with 2nd driver pin 'm00_axis_aclk' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_axis_aresetn with 1st driver pin 'm00_axis_aresetn' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_axis_aresetn with 2nd driver pin 's00_axis_aresetn' [/home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_5/synth/design_1_math_doer_0_5.sv:53]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        2|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_math_doer_0_5 | inst/nolabel_line47/last_pipe_reg[14]     | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_math_doer_0_5 | inst/nolabel_line47/valid_pipe_reg[14]    | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_math_doer_0_5 | inst/nolabel_line47/intmdt_term_reg[8][1] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
++-----------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   155|
+|2     |LUT1   |     1|
+|3     |LUT2   |   506|
+|4     |LUT3   |   186|
+|5     |LUT4   |    25|
+|6     |LUT5   |    29|
+|7     |LUT6   |     4|
+|8     |SRL16E |     4|
+|9     |FDRE   |   499|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 4 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.719 ; gain = 526.531 ; free physical = 15495 ; free virtual = 30614
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2441.727 ; gain = 676.281 ; free physical = 15495 ; free virtual = 30614
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2441.727 ; gain = 0.000 ; free physical = 15759 ; free virtual = 30878
+INFO: [Netlist 29-17] Analyzing 155 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: m00_axis_aresetn.
+WARNING: [Netlist 29-1115] Found multi-term driver net: s00_axis_aclk.
+WARNING: [Netlist 29-101] Netlist 'design_1_math_doer_0_5' is not ideal for floorplanning, since the cellview 'fir_15' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2497.746 ; gain = 0.000 ; free physical = 15769 ; free virtual = 30888
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 511f3039
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 19 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2497.746 ; gain = 1073.809 ; free physical = 15769 ; free virtual = 30888
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1826.107; main = 1489.200; forked = 352.378
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3474.230; main = 2497.750; forked = 1032.508
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2521.758 ; gain = 0.000 ; free physical = 15768 ; free virtual = 30888
+INFO: [Common 17-1381] The checkpoint '/home/skravitz/project_1/project_1.runs/design_1_math_doer_0_5_synth_1/design_1_math_doer_0_5.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2521.758 ; gain = 0.000 ; free physical = 15772 ; free virtual = 30892
+INFO: [Common 17-1381] The checkpoint '/home/skravitz/project_1/project_1.runs/design_1_math_doer_0_5_synth_1/design_1_math_doer_0_5.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_math_doer_0_5_utilization_synth.rpt -pb design_1_math_doer_0_5_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 24 21:45:06 2024...

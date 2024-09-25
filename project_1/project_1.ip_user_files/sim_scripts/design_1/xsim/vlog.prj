@@ -1,0 +1,20 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/b28c/hdl" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+"../../../bd/design_1/ipshared/864f/hdl/math_doer.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/b28c/hdl" \
+"../../../bd/design_1/ipshared/864f/43d0/fir_15.sv" \
+"../../../bd/design_1/ip/design_1_math_doer_0_5/sim/design_1_math_doer_0_5.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_1.gen/sources_1/bd/design_1/ipshared/b28c/hdl" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
