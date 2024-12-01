@@ -57,9 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 6
-set_msg_config -id {HDL-1065} -limit 10000
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z020clg400-1
+create_project -in_memory -part xczu48dr-ffvg1517-2-e
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -70,13 +70,8 @@ set_property parent.project_path /home/skravitz/project_1/project_1.xpr [current
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths {
-  /home/skravitz/ip_repo/math_doer_1_0
-  /home/skravitz/ip_repo/do_math_1_0
-  /home/skravitz/ip_repo/math_doer_1_0
-  /home/skravitz/ip_repo/math_doer_1_0
-} [current_project]
+set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
+set_property ip_repo_paths /home/skravitz/ip_repo/TLAST_GEN_1_0 [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/skravitz/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -84,23 +79,47 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/skravitz/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sawn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_swn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sbn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc]
+set_property used_in_synthesis false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/skravitz/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/data/startup.elf]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,8 +130,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/skravitz/project_1/project_1.srcs/constrs_1/imports/Downloads/base.xdc
-set_property used_in_implementation false [get_files /home/skravitz/project_1/project_1.srcs/constrs_1/imports/Downloads/base.xdc]
+read_xdc /home/skravitz/project_1/project_1.srcs/constrs_1/new/base.xdc
+set_property used_in_implementation false [get_files /home/skravitz/project_1/project_1.srcs/constrs_1/new/base.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -122,7 +141,7 @@ read_checkpoint -auto_incremental -incremental /home/skravitz/project_1/project_
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top design_1_wrapper -part xc7z020clg400-1
+synth_design -top design_1_wrapper -part xczu48dr-ffvg1517-2-e
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

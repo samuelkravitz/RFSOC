@@ -56,10 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "design_1_axi_dma_0_0_synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z020clg400-1
+create_project -in_memory -part xczu48dr-ffvg1517-2-e
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -70,8 +71,8 @@ set_property parent.project_path /home/skravitz/project_1/project_1.xpr [current
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths /home/skravitz/ip_repo/math_doer_1_0 [current_project]
+set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
+set_property ip_repo_paths /home/skravitz/ip_repo/TLAST_GEN_1_0 [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/skravitz/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -103,7 +104,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top design_1_axi_dma_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+synth_design -top design_1_axi_dma_0_0 -part xczu48dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 
