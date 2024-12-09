@@ -67,5 +67,5 @@ create_clock -period 2.035 -name design_1_usp_rf_data_converter_0_0_adc2_clk [ge
 
 
 #AXI Streaming Clock for ADC2
-create_clock -period 2.035 -name design_1_usp_rf_data_converter_0_0_m2_axis_aclk [get_ports m2_axis_aclk]
+create_clock -period 6.782 -name design_1_usp_rf_data_converter_0_0_m2_axis_aclk [get_ports m2_axis_aclk]
 

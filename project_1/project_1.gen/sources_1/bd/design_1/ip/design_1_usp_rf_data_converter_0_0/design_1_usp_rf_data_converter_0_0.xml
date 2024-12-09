@@ -3679,7 +3679,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M2_AXIS_ACLK.FREQ_HZ">491520000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M2_AXIS_ACLK.FREQ_HZ">147456000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3847,7 +3847,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M20_AXIS.FREQ_HZ">491520000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M20_AXIS.FREQ_HZ">147456000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4006,7 +4006,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M21_AXIS.FREQ_HZ">491520000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M21_AXIS.FREQ_HZ">147456000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -19202,11 +19202,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 01 19:06:49 UTC 2024</spirit:value>
+            <spirit:value>Mon Dec 09 20:35:03 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f51baa8f</spirit:value>
+            <spirit:value>9:283ec796</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19221,11 +19221,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 01 19:06:49 UTC 2024</spirit:value>
+            <spirit:value>Mon Dec 09 20:35:03 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:db1f7331</spirit:value>
+            <spirit:value>9:53c39fdc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19239,11 +19239,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 01 19:07:51 UTC 2024</spirit:value>
+            <spirit:value>Mon Dec 09 20:35:07 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:db1f7331</spirit:value>
+            <spirit:value>9:53c39fdc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19254,7 +19254,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:db1f7331</spirit:value>
+            <spirit:value>9:53c39fdc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19270,11 +19270,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 01 19:06:49 UTC 2024</spirit:value>
+            <spirit:value>Mon Dec 09 20:35:03 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f51baa8f</spirit:value>
+            <spirit:value>9:283ec796</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19290,11 +19290,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 01 19:06:49 UTC 2024</spirit:value>
+            <spirit:value>Mon Dec 09 20:35:03 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:db1f7331</spirit:value>
+            <spirit:value>9:53c39fdc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -47519,7 +47519,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_ADC2_Fabric_Freq</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC2_Fabric_Freq">491.520</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC2_Fabric_Freq">147.456</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_ADC2_OBS_Fabric_Freq</spirit:name>
@@ -47547,7 +47547,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC2_Decimation</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC2_Decimation">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC2_Decimation">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC2_Clock_Source</spirit:name>
@@ -47575,11 +47575,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Decimation_Mode20</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode20">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode20">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_OBS_Decimation_Mode20</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_OBS_Decimation_Mode20">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_OBS_Decimation_Mode20">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_CalOpt_Mode20</spirit:name>
@@ -47655,11 +47655,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Decimation_Mode21</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode21">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode21">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_OBS_Decimation_Mode21</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_OBS_Decimation_Mode21">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_OBS_Decimation_Mode21">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_CalOpt_Mode21</spirit:name>
@@ -49954,10 +49954,6 @@
       <spirit:enumeration>491.520</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_03410ed4</spirit:name>
-      <spirit:enumeration spirit:text="3x">3</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_pairs_2164ec7a</spirit:name>
       <spirit:enumeration spirit:text="Off">0</spirit:enumeration>
       <spirit:enumeration spirit:text="Input Refclk">1</spirit:enumeration>
@@ -50099,6 +50095,10 @@
     <spirit:choice>
       <spirit:name>choice_pairs_b3ed7f69</spirit:name>
       <spirit:enumeration spirit:text="Tile224">0</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_b8361206</spirit:name>
+      <spirit:enumeration spirit:text="10x">10</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_b8a35c0f</spirit:name>
@@ -50432,16 +50432,10 @@
     <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>design_1_usp_rf_data_converter_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_usp_rf_data_converter_0_0_stub.v</spirit:name>
+        <spirit:name>design_1_usp_rf_data_converter_0_0_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
@@ -50451,10 +50445,10 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>design_1_usp_rf_data_converter_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:name>design_1_usp_rf_data_converter_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
@@ -50462,6 +50456,12 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_usp_rf_data_converter_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -53028,7 +53028,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADC2_Fabric_Freq</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC2_Fabric_Freq" spirit:order="218">491.520</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC2_Fabric_Freq" spirit:order="218">147.456</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53168,7 +53168,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Decimation_Mode20</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode20" spirit:choiceRef="choice_pairs_03410ed4" spirit:order="230">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode20" spirit:choiceRef="choice_pairs_b8361206" spirit:order="230">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53180,7 +53180,7 @@
     <spirit:parameter>
       <spirit:name>ADC_OBS_Decimation_Mode20</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_OBS_Decimation_Mode20" spirit:choiceRef="choice_pairs_03410ed4" spirit:order="231">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_OBS_Decimation_Mode20" spirit:choiceRef="choice_pairs_b8361206" spirit:order="231">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53394,7 +53394,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Decimation_Mode21</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode21" spirit:choiceRef="choice_pairs_03410ed4" spirit:order="249">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode21" spirit:choiceRef="choice_pairs_b8361206" spirit:order="249">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53406,7 +53406,7 @@
     <spirit:parameter>
       <spirit:name>ADC_OBS_Decimation_Mode21</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_OBS_Decimation_Mode21" spirit:choiceRef="choice_pairs_03410ed4" spirit:order="250">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_OBS_Decimation_Mode21" spirit:choiceRef="choice_pairs_b8361206" spirit:order="250">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -55154,7 +55154,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>mADC_Fabric_Freq</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Fabric_Freq" spirit:order="398">491.520</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Fabric_Freq" spirit:order="398">147.456</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -55250,7 +55250,7 @@
     <spirit:parameter>
       <spirit:name>mADC_Decimation_Mode00</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Decimation_Mode00" spirit:choiceRef="choice_pairs_ea37892d" spirit:order="406">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Decimation_Mode00" spirit:choiceRef="choice_pairs_ea37892d" spirit:order="406">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -55453,7 +55453,7 @@
     <spirit:parameter>
       <spirit:name>mADC_Decimation_Mode01</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Decimation_Mode01" spirit:choiceRef="choice_pairs_03410ed4" spirit:order="423">3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mADC_Decimation_Mode01" spirit:choiceRef="choice_pairs_b8361206" spirit:order="423">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

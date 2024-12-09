@@ -32,7 +32,9 @@
         "m01_couplers": {}
       },
       "rst_ps8_0_99M": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "fir_compiler_0": "",
+      "fir_compiler_1": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -1090,7 +1092,7 @@
             "value": "1"
           },
           "mADC_Decimation_Mode00": {
-            "value": "3"
+            "value": "10"
           },
           "mADC_Mixer_Type00": {
             "value": "2"
@@ -1111,7 +1113,7 @@
       },
       "TLAST_GEN_0": {
         "vlnv": "user.org:user:TLAST_GEN:1.0",
-        "ip_revision": "4",
+        "ip_revision": "7",
         "xci_name": "design_1_TLAST_GEN_0_0",
         "xci_path": "ip/design_1_TLAST_GEN_0_0/design_1_TLAST_GEN_0_0.xci",
         "inst_hier_path": "TLAST_GEN_0"
@@ -1127,16 +1129,16 @@
             "value": "868.0500000000001"
           },
           "CLKOUT1_JITTER": {
-            "value": "217.020"
+            "value": "254.905"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "316.951"
+            "value": "353.931"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "491.520"
+            "value": "147.456"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "112.000"
+            "value": "104.000"
           },
           "MMCM_CLKIN1_PERIOD": {
             "value": "86.805"
@@ -1145,7 +1147,7 @@
             "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "2.625"
+            "value": "8.125"
           },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "1"
@@ -1183,6 +1185,9 @@
         "xci_path": "ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
+          "FIFO_DEPTH": {
+            "value": "4096"
+          },
           "IS_ACLK_ASYNC": {
             "value": "1"
           }
@@ -1917,6 +1922,154 @@
             }
           }
         }
+      },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "ip_revision": "22",
+        "xci_name": "design_1_fir_compiler_0_0",
+        "xci_path": "ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0.xci",
+        "inst_hier_path": "fir_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "147.456"
+          },
+          "CoefficientVector": {
+            "value": [
+              "-169,   -11,   -12,   -12,   -12,   -13,   -13,   -13,   -14,   -14,   -14,   -15,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,  ",
+              "-17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -15,   -15,   -15,   -14,   -14,   -13,   -13,   -12,   -12,   -11,   -10,   -10,   -9,   -8,   -7,   -6,   -5,   -4,   -3,   -2,   -1,  ",
+              "0,   1,   3,   4,   5,   7,   8,   10,   12,   13,   15,   17,   18,   20,   22,   24,   26,   28,   30,   32,   34,   37,   39,   41,   44,   46,   49,   51,   54,   56,   59,   62,   65,   67,   70,",
+              "  73,   76,   79,   82,   85,   88,   91,   94,   97,   101,   104,   107,   110,   114,   117,   120,   124,   127,   131,   134,   137,   141,   144,   148,   151,   155,   158,   162,   165,   169,",
+              "  172,   176,   179,   183,   186,   190,   193,   196,   200,   203,   207,   210,   213,   217,   220,   223,   226,   229,   233,   236,   239,   242,   245,   248,   250,   253,   256,   259,  ",
+              "261,   264,   267,   269,   272,   274,   276,   278,   281,   283,   285,   287,   289,   291,   292,   294,   296,   297,   299,   300,   301,   302,   304,   305,   306,   307,   307,   308,   309,",
+              "  309,   310,   310,   310,   311,   311,   311,   311,   311,   310,   310,   310,   309,   309,   308,   307,   307,   306,   305,   304,   302,   301,   300,   299,   297,   296,   294,   292,  ",
+              "291,   289,   287,   285,   283,   281,   278,   276,   274,   272,   269,   267,   264,   261,   259,   256,   253,   250,   248,   245,   242,   239,   236,   233,   229,   226,   223,   220,   217,",
+              "  213,   210,   207,   203,   200,   196,   193,   190,   186,   183,   179,   176,   172,   169,   165,   162,   158,   155,   151,   148,   144,   141,   137,   134,   131,   127,   124,   120,  ",
+              "117,   114,   110,   107,   104,   101,   97,   94,   91,   88,   85,   82,   79,   76,   73,   70,   67,   65,   62,   59,   56,   54,   51,   49,   46,   44,   41,   39,   37,   34,   32,   30,  ",
+              "28,   26,   24,   22,   20,   18,   17,   15,   13,   12,   10,   8,   7,   5,   4,   3,   1,   0,   -1,   -2,   -3,   -4,   -5,   -6,   -7,   -8,   -9,   -10,   -10,   -11,   -12,   -12,   -13,  ",
+              "-13,   -14,   -14,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -16,   -15,",
+              "  -15,   -15,   -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169"
+            ]
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "187"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Data_Sign": {
+            "value": "Signed"
+          },
+          "Data_Width": {
+            "value": "14"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "M_DATA_Has_TREADY": {
+            "value": "true"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Full_Precision"
+          },
+          "Output_Width": {
+            "value": "30"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "Sample_Frequency": {
+            "value": "147.456"
+          }
+        }
+      },
+      "fir_compiler_1": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "ip_revision": "22",
+        "xci_name": "design_1_fir_compiler_0_1",
+        "xci_path": "ip/design_1_fir_compiler_0_1/design_1_fir_compiler_0_1.xci",
+        "inst_hier_path": "fir_compiler_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "147.456"
+          },
+          "CoefficientVector": {
+            "value": [
+              "-169,   -11,   -12,   -12,   -12,   -13,   -13,   -13,   -14,   -14,   -14,   -15,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,  ",
+              "-17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -15,   -15,   -15,   -14,   -14,   -13,   -13,   -12,   -12,   -11,   -10,   -10,   -9,   -8,   -7,   -6,   -5,   -4,   -3,   -2,   -1,  ",
+              "0,   1,   3,   4,   5,   7,   8,   10,   12,   13,   15,   17,   18,   20,   22,   24,   26,   28,   30,   32,   34,   37,   39,   41,   44,   46,   49,   51,   54,   56,   59,   62,   65,   67,   70,",
+              "  73,   76,   79,   82,   85,   88,   91,   94,   97,   101,   104,   107,   110,   114,   117,   120,   124,   127,   131,   134,   137,   141,   144,   148,   151,   155,   158,   162,   165,   169,",
+              "  172,   176,   179,   183,   186,   190,   193,   196,   200,   203,   207,   210,   213,   217,   220,   223,   226,   229,   233,   236,   239,   242,   245,   248,   250,   253,   256,   259,  ",
+              "261,   264,   267,   269,   272,   274,   276,   278,   281,   283,   285,   287,   289,   291,   292,   294,   296,   297,   299,   300,   301,   302,   304,   305,   306,   307,   307,   308,   309,",
+              "  309,   310,   310,   310,   311,   311,   311,   311,   311,   310,   310,   310,   309,   309,   308,   307,   307,   306,   305,   304,   302,   301,   300,   299,   297,   296,   294,   292,  ",
+              "291,   289,   287,   285,   283,   281,   278,   276,   274,   272,   269,   267,   264,   261,   259,   256,   253,   250,   248,   245,   242,   239,   236,   233,   229,   226,   223,   220,   217,",
+              "  213,   210,   207,   203,   200,   196,   193,   190,   186,   183,   179,   176,   172,   169,   165,   162,   158,   155,   151,   148,   144,   141,   137,   134,   131,   127,   124,   120,  ",
+              "117,   114,   110,   107,   104,   101,   97,   94,   91,   88,   85,   82,   79,   76,   73,   70,   67,   65,   62,   59,   56,   54,   51,   49,   46,   44,   41,   39,   37,   34,   32,   30,  ",
+              "28,   26,   24,   22,   20,   18,   17,   15,   13,   12,   10,   8,   7,   5,   4,   3,   1,   0,   -1,   -2,   -3,   -4,   -5,   -6,   -7,   -8,   -9,   -10,   -10,   -11,   -12,   -12,   -13,  ",
+              "-13,   -14,   -14,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -16,   -15,",
+              "  -15,   -15,   -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169"
+            ]
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "ColumnConfig": {
+            "value": "187"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "Data_Sign": {
+            "value": "Signed"
+          },
+          "Data_Width": {
+            "value": "14"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "M_DATA_Has_TREADY": {
+            "value": "true"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Full_Precision"
+          },
+          "Output_Width": {
+            "value": "30"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "Sample_Frequency": {
+            "value": "147.456"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1950,6 +2103,18 @@
           "axi_dma_0/S_AXIS_S2MM"
         ]
       },
+      "fir_compiler_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "fir_compiler_0/M_AXIS_DATA",
+          "TLAST_GEN_0/S00_AXIS"
+        ]
+      },
+      "fir_compiler_1_M_AXIS_DATA": {
+        "interface_ports": [
+          "fir_compiler_1/M_AXIS_DATA",
+          "TLAST_GEN_0/S01_AXIS"
+        ]
+      },
       "ps8_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps8_0_axi_periph/M00_AXI",
@@ -1971,13 +2136,13 @@
       "usp_rf_data_converter_0_m20_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m20_axis",
-          "TLAST_GEN_0/S00_AXIS"
+          "fir_compiler_0/S_AXIS_DATA"
         ]
       },
       "usp_rf_data_converter_0_m21_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m21_axis",
-          "TLAST_GEN_0/S01_AXIS"
+          "fir_compiler_1/S_AXIS_DATA"
         ]
       },
       "vin2_01_1": {
@@ -2005,10 +2170,12 @@
           "clk_wiz_0/clk_out1",
           "proc_sys_reset_0/slowest_sync_clk",
           "axis_data_fifo_0/s_axis_aclk",
-          "TLAST_GEN_0/s01_axis_aclk",
+          "usp_rf_data_converter_0/m2_axis_aclk",
+          "fir_compiler_0/aclk",
+          "fir_compiler_1/aclk",
           "TLAST_GEN_0/s00_axis_aclk",
-          "TLAST_GEN_0/m00_axis_aclk",
-          "usp_rf_data_converter_0/m2_axis_aclk"
+          "TLAST_GEN_0/s01_axis_aclk",
+          "TLAST_GEN_0/m00_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -2021,11 +2188,11 @@
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
           "axis_data_fifo_0/s_axis_aresetn",
-          "TLAST_GEN_0/s01_axis_aresetn",
-          "TLAST_GEN_0/s00_axis_aresetn",
-          "TLAST_GEN_0/m00_axis_aresetn",
           "ps8_0_axi_periph/M01_ARESETN",
-          "usp_rf_data_converter_0/m2_axis_aresetn"
+          "usp_rf_data_converter_0/m2_axis_aresetn",
+          "TLAST_GEN_0/s00_axis_aresetn",
+          "TLAST_GEN_0/s01_axis_aresetn",
+          "TLAST_GEN_0/m00_axis_aresetn"
         ]
       },
       "rst_ps8_0_99M_peripheral_aresetn": {

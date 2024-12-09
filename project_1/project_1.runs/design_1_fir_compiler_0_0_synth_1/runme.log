@@ -1,0 +1,594 @@
+
+*** Running vivado
+    with args -log design_1_fir_compiler_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_fir_compiler_0_0.tcl
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Dec  9 15:35:12 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_fir_compiler_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/RFSOC/ip_repo/TLAST_GEN_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_fir_compiler_0_0
+Command: synth_design -top design_1_fir_compiler_0_0 -part xczu48dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 115930
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2781.711 ; gain = 352.832 ; free physical = 13168 ; free virtual = 26369
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_fir_compiler_0_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: design_1_fir_compiler_0_0 - type: string 
+	Parameter C_COEF_FILE bound to: design_1_fir_compiler_0_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 187 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 373 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 187 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 14 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 14 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 14 - type: string 
+	Parameter C_DATA_WIDTH bound to: 14 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 30 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 30 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 30 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 30 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 187 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
+	Parameter C_INPUT_RATE bound to: 1 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 1 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 193 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_22' declared at '/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ipshared/b54e/hdl/fir_compiler_v7_2_vh_rfs.vhd:67067' bound to instance 'U0' of component 'fir_compiler_v7_2_22' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'design_1_fir_compiler_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/synth/design_1_fir_compiler_0_0.vhd:71]
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized195 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized195 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized193 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized193 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized193 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized193 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized193 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized188 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized188 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized188 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized188 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized188 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PRE_ADDSUB in module calc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CED in module calc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized191 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized191 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized191 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized191 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized191 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized194 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized194 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized194 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized194 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized194 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][57] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][56] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][55] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][54] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][53] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][52] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][51] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][50] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][49] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][48] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][62] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][61] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][60] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][59] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][58] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][57] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][56] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][55] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][54] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][53] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][52] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][51] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][50] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][49] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][48] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P_EN in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[11] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[10] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[9] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[8] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[7] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[6] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[5] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[4] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[3] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[2] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[1] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPCODE[0] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[29] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[28] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[27] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[26] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[25] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[24] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[23] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[22] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[21] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[20] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[19] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[18] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[17] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[16] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[15] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[14] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[13] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[12] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[11] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[10] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[9] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[8] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[7] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[6] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[5] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[4] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[3] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[2] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[1] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN[0] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][57] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][56] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][55] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][54] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][53] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][52] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][51] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][50] in module addsub_mult_add__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3354.961 ; gain = 926.082 ; free physical = 12242 ; free virtual = 25445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3354.961 ; gain = 926.082 ; free physical = 12257 ; free virtual = 25460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3354.961 ; gain = 926.082 ; free physical = 12257 ; free virtual = 25460
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3406.102 ; gain = 0.000 ; free physical = 12243 ; free virtual = 25445
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.runs/design_1_fir_compiler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.runs/design_1_fir_compiler_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3993.898 ; gain = 0.000 ; free physical = 16415 ; free virtual = 29630
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 187 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 187 instances
+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:00:53 . Memory (MB): peak = 4100.824 ; gain = 1671.945 ; free physical = 9126 ; free virtual = 22349
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[1].i_mem' (filt_mem__parameterized0) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[22].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[3].i_mem' (filt_mem__parameterized2) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[21].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[4].i_mem' (filt_mem__parameterized3) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[20].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[6].i_mem' (filt_mem__parameterized5) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[19].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[8].i_mem' (filt_mem__parameterized7) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[9].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[8].i_mem' (filt_mem__parameterized7) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[17].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[10].i_mem' (filt_mem__parameterized9) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[11].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[10].i_mem' (filt_mem__parameterized9) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[12].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[10].i_mem' (filt_mem__parameterized9) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[13].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[10].i_mem' (filt_mem__parameterized9) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[14].i_mem'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[10].i_mem' (filt_mem__parameterized9) to 'U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_mem_array[15].i_mem'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_parallel.rfd_int_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:03 . Memory (MB): peak = 4116.836 ; gain = 1687.957 ; free physical = 8478 ; free virtual = 21705
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:08 . Memory (MB): peak = 4159.211 ; gain = 1730.332 ; free physical = 8527 ; free virtual = 21746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:26 . Memory (MB): peak = 4159.211 ; gain = 1730.332 ; free physical = 8568 ; free virtual = 21787
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:47 ; elapsed = 00:01:44 . Memory (MB): peak = 4171.137 ; gain = 1742.258 ; free physical = 5958 ; free virtual = 19265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:01:54 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6009 ; free virtual = 19316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:01:54 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6009 ; free virtual = 19316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:01:58 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6024 ; free virtual = 19323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:01:58 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6024 ; free virtual = 19323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:01:58 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6027 ; free virtual = 19326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:01:58 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6027 ; free virtual = 19326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|calc_741    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_740    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_739    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_738    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_737    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_736    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_735    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_734    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_733    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_732    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_731    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_730    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_729    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_728    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_727    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_726    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_725    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_724    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_723    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_722    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_721    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_720    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_719    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_718    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_717    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_716    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_715    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_714    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_713    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_712    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_711    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_710    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_709    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_708    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_707    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_706    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_705    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_704    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_703    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_702    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_701    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_700    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_699    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_698    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_697    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_696    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_695    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_694    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_693    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_692    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_691    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_690    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_689    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_688    | (PCIN+((D'+A')'*B')')' | 30     | 8      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_687    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_686    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_685    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_684    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_683    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_682    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_681    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_680    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_679    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_678    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_677    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_676    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_675    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_674    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_673    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_672    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_671    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_670    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_669    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_668    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_667    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_666    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_665    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_664    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_663    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_662    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_661    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_660    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_659    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_658    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_657    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_656    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_655    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_654    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_653    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_652    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_651    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_650    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_649    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_648    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_647    | (PCIN+((D'+A')'*B')')' | 30     | 9      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_646    | (C'+((D'+B')')'        | -      | 9      | 0      | 27     | 48     | -    | 1    | 1    | 1    | 1     | 1    | 1    | 
+|calc_645    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_644    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_643    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_642    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_641    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_640    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_639    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_638    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_637    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_636    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_635    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_634    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_633    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_632    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_631    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_630    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_629    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_628    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_627    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_626    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_625    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_624    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_623    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_622    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_621    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_620    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_619    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_618    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_617    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_616    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_615    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_614    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_613    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_612    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_611    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_610    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_609    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_608    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_607    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_606    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_605    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_604    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_603    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_602    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_601    | (PCIN+((D'+A')'*B')')' | 30     | 0      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_600    | (PCIN+((D'+A')'*B')')' | 30     | 1      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_599    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_598    | (PCIN+((D'+A')'*B')')' | 30     | 2      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_597    | (PCIN+((D'+A')'*B')')' | 30     | 3      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_596    | (PCIN+((D'+A')'*B')')' | 30     | 3      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_595    | (PCIN+((D'+A')'*B')')' | 30     | 3      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_594    | (PCIN+((D'+A')'*B')')' | 30     | 4      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_593    | (PCIN+((D'+A')'*B')')' | 30     | 4      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_592    | (PCIN+((D'+A')'*B')')' | 30     | 4      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_591    | (PCIN+((D'+A')'*B')')' | 30     | 4      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_590    | (PCIN+((D'+A')'*B')')' | 30     | 4      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_589    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_588    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_587    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_586    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_585    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_584    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_583    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_582    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_581    | (PCIN+((D'+A')'*B')')' | 30     | 5      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_580    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_579    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_578    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_577    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_576    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_575    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_574    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_573    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_572    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_571    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_570    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_569    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_568    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_567    | (PCIN+((D'+A')'*B')')' | 30     | 6      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_566    | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_565    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_564    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_563    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_562    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_561    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_560    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_559    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_558    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_557    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc_556    | (PCIN+((D'+A')'*B')')' | 30     | 7      | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|calc        | (PCIN+((D'+A')'*B')')' | 30     | 18     | -      | 27     | 48     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |DSP_ALU         |   187|
+|2     |DSP_A_B_DATA    |   187|
+|3     |DSP_C_DATA      |   187|
+|4     |DSP_MULTIPLIER  |   187|
+|5     |DSP_M_DATA      |   187|
+|6     |DSP_OUTPUT      |   187|
+|7     |DSP_PREADD      |   187|
+|8     |DSP_PREADD_DATA |   187|
+|9     |LUT2            |   190|
+|10    |LUT3            |     3|
+|11    |LUT4            |     3|
+|12    |LUT5            |     5|
+|13    |LUT6            |     9|
+|14    |SRL16E          |  2873|
+|15    |SRLC32E         |  8602|
+|16    |FDRE            |  8087|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:01:58 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 6027 ; free virtual = 19326
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:01:36 . Memory (MB): peak = 4175.223 ; gain = 1008.484 ; free physical = 16543 ; free virtual = 29842
+Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:01:59 . Memory (MB): peak = 4175.223 ; gain = 1746.344 ; free physical = 16629 ; free virtual = 29844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4175.223 ; gain = 0.000 ; free physical = 16631 ; free virtual = 29846
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4176.949 ; gain = 0.000 ; free physical = 16633 ; free virtual = 29848
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 187 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 187 instances
+
+Synth Design complete | Checksum: e21b539c
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:06 . Memory (MB): peak = 4176.949 ; gain = 2734.215 ; free physical = 16633 ; free virtual = 29848
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 13874.438; main = 3225.050; forked = 10740.415
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 19515.207; main = 4176.953; forked = 15347.988
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4200.961 ; gain = 0.000 ; free physical = 16625 ; free virtual = 29846
+INFO: [Common 17-1381] The checkpoint '/home/skravitz/RFSOC/project_1/project_1.runs/design_1_fir_compiler_0_0_synth_1/design_1_fir_compiler_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_fir_compiler_0_0, cache-ID = 71b81bcc3391d253
+INFO: [Coretcl 2-1174] Renamed 1313 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4200.961 ; gain = 0.000 ; free physical = 16561 ; free virtual = 29826
+INFO: [Common 17-1381] The checkpoint '/home/skravitz/RFSOC/project_1/project_1.runs/design_1_fir_compiler_0_0_synth_1/design_1_fir_compiler_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_fir_compiler_0_0_utilization_synth.rpt -pb design_1_fir_compiler_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 15:37:27 2024...

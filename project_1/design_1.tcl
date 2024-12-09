@@ -138,6 +138,7 @@ xilinx.com:ip:clk_wiz:6.0\
 xilinx.com:ip:proc_sys_reset:5.0\
 xilinx.com:ip:axis_data_fifo:2.0\
 xilinx.com:ip:smartconnect:1.0\
+xilinx.com:ip:fir_compiler:7.2\
 "
 
    set list_ips_missing ""
@@ -514,7 +515,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
     CONFIG.Converter_Setup {0} \
     CONFIG.mADC_Data_Type00 {1} \
     CONFIG.mADC_Data_Width00 {1} \
-    CONFIG.mADC_Decimation_Mode00 {3} \
+    CONFIG.mADC_Decimation_Mode00 {10} \
     CONFIG.mADC_Mixer_Type00 {2} \
     CONFIG.mADC_PLL_Enable {true} \
     CONFIG.mADC_Refclk_Freq {491.520} \
@@ -530,13 +531,13 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [list \
     CONFIG.CLKIN1_JITTER_PS {868.0500000000001} \
-    CONFIG.CLKOUT1_JITTER {217.020} \
-    CONFIG.CLKOUT1_PHASE_ERROR {316.951} \
-    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {491.520} \
-    CONFIG.MMCM_CLKFBOUT_MULT_F {112.000} \
+    CONFIG.CLKOUT1_JITTER {254.905} \
+    CONFIG.CLKOUT1_PHASE_ERROR {353.931} \
+    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {147.456} \
+    CONFIG.MMCM_CLKFBOUT_MULT_F {104.000} \
     CONFIG.MMCM_CLKIN1_PERIOD {86.805} \
     CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-    CONFIG.MMCM_CLKOUT0_DIVIDE_F {2.625} \
+    CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.125} \
     CONFIG.MMCM_DIVCLK_DIVIDE {1} \
     CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {true} \
     CONFIG.PRIM_IN_FREQ {11.52} \
@@ -554,7 +555,10 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
 
   # Create instance: axis_data_fifo_0, and set properties
   set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 ]
-  set_property CONFIG.IS_ACLK_ASYNC {1} $axis_data_fifo_0
+  set_property -dict [list \
+    CONFIG.FIFO_DEPTH {4096} \
+    CONFIG.IS_ACLK_ASYNC {1} \
+  ] $axis_data_fifo_0
 
 
   # Create instance: ps8_0_axi_periph, and set properties
@@ -573,25 +577,97 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   set_property CONFIG.NUM_SI {1} $axi_smc
 
 
+  # Create instance: fir_compiler_0, and set properties
+  set fir_compiler_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fir_compiler:7.2 fir_compiler_0 ]
+  set_property -dict [list \
+    CONFIG.Clock_Frequency {147.456} \
+    CONFIG.CoefficientVector {-169,   -11,   -12,   -12,   -12,   -13,   -13,   -13,   -14,   -14,   -14,   -15,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,\
+  -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -15,   -15,   -15,   -14,   -14,   -13,   -13,   -12,   -12,   -11,   -10,   -10,   -9,   -8,   -7,   -6,   -5,   -4,\
+  -3,   -2,   -1,   0,   1,   3,   4,   5,   7,   8,   10,   12,   13,   15,   17,   18,   20,   22,   24,   26,   28,   30,   32,   34,   37,   39,   41,   44,   46,   49,   51,   54,   56,   59,   62,\
+  65,   67,   70,   73,   76,   79,   82,   85,   88,   91,   94,   97,   101,   104,   107,   110,   114,   117,   120,   124,   127,   131,   134,   137,   141,   144,   148,   151,   155,   158,   162,\
+  165,   169,   172,   176,   179,   183,   186,   190,   193,   196,   200,   203,   207,   210,   213,   217,   220,   223,   226,   229,   233,   236,   239,   242,   245,   248,   250,   253,   256,\
+  259,   261,   264,   267,   269,   272,   274,   276,   278,   281,   283,   285,   287,   289,   291,   292,   294,   296,   297,   299,   300,   301,   302,   304,   305,   306,   307,   307,   308,\
+  309,   309,   310,   310,   310,   311,   311,   311,   311,   311,   310,   310,   310,   309,   309,   308,   307,   307,   306,   305,   304,   302,   301,   300,   299,   297,   296,   294,   292,\
+  291,   289,   287,   285,   283,   281,   278,   276,   274,   272,   269,   267,   264,   261,   259,   256,   253,   250,   248,   245,   242,   239,   236,   233,   229,   226,   223,   220,   217,\
+  213,   210,   207,   203,   200,   196,   193,   190,   186,   183,   179,   176,   172,   169,   165,   162,   158,   155,   151,   148,   144,   141,   137,   134,   131,   127,   124,   120,   117,\
+  114,   110,   107,   104,   101,   97,   94,   91,   88,   85,   82,   79,   76,   73,   70,   67,   65,   62,   59,   56,   54,   51,   49,   46,   44,   41,   39,   37,   34,   32,   30,   28,   26,\
+  24,   22,   20,   18,   17,   15,   13,   12,   10,   8,   7,   5,   4,   3,   1,   0,   -1,   -2,   -3,   -4,   -5,   -6,   -7,   -8,   -9,   -10,   -10,   -11,   -12,   -12,   -13,   -13,   -14,  \
+-14,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -16,   -15,   -15,   -15,\
+  -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169} \
+    CONFIG.Coefficient_Fractional_Bits {0} \
+    CONFIG.Coefficient_Sets {1} \
+    CONFIG.Coefficient_Sign {Signed} \
+    CONFIG.Coefficient_Structure {Inferred} \
+    CONFIG.Coefficient_Width {16} \
+    CONFIG.ColumnConfig {187} \
+    CONFIG.DATA_Has_TLAST {Not_Required} \
+    CONFIG.Data_Sign {Signed} \
+    CONFIG.Data_Width {14} \
+    CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+    CONFIG.M_DATA_Has_TREADY {true} \
+    CONFIG.Output_Rounding_Mode {Full_Precision} \
+    CONFIG.Output_Width {30} \
+    CONFIG.Quantization {Integer_Coefficients} \
+    CONFIG.Sample_Frequency {147.456} \
+  ] $fir_compiler_0
+
+
+  # Create instance: fir_compiler_1, and set properties
+  set fir_compiler_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fir_compiler:7.2 fir_compiler_1 ]
+  set_property -dict [list \
+    CONFIG.Clock_Frequency {147.456} \
+    CONFIG.CoefficientVector {-169,   -11,   -12,   -12,   -12,   -13,   -13,   -13,   -14,   -14,   -14,   -15,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,\
+  -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -15,   -15,   -15,   -14,   -14,   -13,   -13,   -12,   -12,   -11,   -10,   -10,   -9,   -8,   -7,   -6,   -5,   -4,\
+  -3,   -2,   -1,   0,   1,   3,   4,   5,   7,   8,   10,   12,   13,   15,   17,   18,   20,   22,   24,   26,   28,   30,   32,   34,   37,   39,   41,   44,   46,   49,   51,   54,   56,   59,   62,\
+  65,   67,   70,   73,   76,   79,   82,   85,   88,   91,   94,   97,   101,   104,   107,   110,   114,   117,   120,   124,   127,   131,   134,   137,   141,   144,   148,   151,   155,   158,   162,\
+  165,   169,   172,   176,   179,   183,   186,   190,   193,   196,   200,   203,   207,   210,   213,   217,   220,   223,   226,   229,   233,   236,   239,   242,   245,   248,   250,   253,   256,\
+  259,   261,   264,   267,   269,   272,   274,   276,   278,   281,   283,   285,   287,   289,   291,   292,   294,   296,   297,   299,   300,   301,   302,   304,   305,   306,   307,   307,   308,\
+  309,   309,   310,   310,   310,   311,   311,   311,   311,   311,   310,   310,   310,   309,   309,   308,   307,   307,   306,   305,   304,   302,   301,   300,   299,   297,   296,   294,   292,\
+  291,   289,   287,   285,   283,   281,   278,   276,   274,   272,   269,   267,   264,   261,   259,   256,   253,   250,   248,   245,   242,   239,   236,   233,   229,   226,   223,   220,   217,\
+  213,   210,   207,   203,   200,   196,   193,   190,   186,   183,   179,   176,   172,   169,   165,   162,   158,   155,   151,   148,   144,   141,   137,   134,   131,   127,   124,   120,   117,\
+  114,   110,   107,   104,   101,   97,   94,   91,   88,   85,   82,   79,   76,   73,   70,   67,   65,   62,   59,   56,   54,   51,   49,   46,   44,   41,   39,   37,   34,   32,   30,   28,   26,\
+  24,   22,   20,   18,   17,   15,   13,   12,   10,   8,   7,   5,   4,   3,   1,   0,   -1,   -2,   -3,   -4,   -5,   -6,   -7,   -8,   -9,   -10,   -10,   -11,   -12,   -12,   -13,   -13,   -14,  \
+-14,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -16,   -15,   -15,   -15,\
+  -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169} \
+    CONFIG.Coefficient_Fractional_Bits {0} \
+    CONFIG.Coefficient_Sets {1} \
+    CONFIG.Coefficient_Sign {Signed} \
+    CONFIG.Coefficient_Structure {Inferred} \
+    CONFIG.Coefficient_Width {16} \
+    CONFIG.ColumnConfig {187} \
+    CONFIG.DATA_Has_TLAST {Not_Required} \
+    CONFIG.Data_Sign {Signed} \
+    CONFIG.Data_Width {14} \
+    CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+    CONFIG.M_DATA_Has_TREADY {true} \
+    CONFIG.Output_Rounding_Mode {Full_Precision} \
+    CONFIG.Output_Width {30} \
+    CONFIG.Quantization {Integer_Coefficients} \
+    CONFIG.Sample_Frequency {147.456} \
+  ] $fir_compiler_1
+
+
   # Create interface connections
   connect_bd_intf_net -intf_net TLAST_GEN_0_M00_AXIS [get_bd_intf_pins TLAST_GEN_0/M00_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
   connect_bd_intf_net -intf_net adc2_clk_1 [get_bd_intf_ports adc2_clk] [get_bd_intf_pins usp_rf_data_converter_0/adc2_clk]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins axi_smc/S00_AXI]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+  connect_bd_intf_net -intf_net fir_compiler_0_M_AXIS_DATA [get_bd_intf_pins fir_compiler_0/M_AXIS_DATA] [get_bd_intf_pins TLAST_GEN_0/S00_AXIS]
+  connect_bd_intf_net -intf_net fir_compiler_1_M_AXIS_DATA [get_bd_intf_pins fir_compiler_1/M_AXIS_DATA] [get_bd_intf_pins TLAST_GEN_0/S01_AXIS]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M00_AXI [get_bd_intf_pins ps8_0_axi_periph/M00_AXI] [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M01_AXI [get_bd_intf_pins ps8_0_axi_periph/M01_AXI] [get_bd_intf_pins usp_rf_data_converter_0/s_axi]
   connect_bd_intf_net -intf_net sysref_in_1 [get_bd_intf_ports sysref_in] [get_bd_intf_pins usp_rf_data_converter_0/sysref_in]
-  connect_bd_intf_net -intf_net usp_rf_data_converter_0_m20_axis [get_bd_intf_pins usp_rf_data_converter_0/m20_axis] [get_bd_intf_pins TLAST_GEN_0/S00_AXIS]
-  connect_bd_intf_net -intf_net usp_rf_data_converter_0_m21_axis [get_bd_intf_pins usp_rf_data_converter_0/m21_axis] [get_bd_intf_pins TLAST_GEN_0/S01_AXIS]
+  connect_bd_intf_net -intf_net usp_rf_data_converter_0_m20_axis [get_bd_intf_pins usp_rf_data_converter_0/m20_axis] [get_bd_intf_pins fir_compiler_0/S_AXIS_DATA]
+  connect_bd_intf_net -intf_net usp_rf_data_converter_0_m21_axis [get_bd_intf_pins usp_rf_data_converter_0/m21_axis] [get_bd_intf_pins fir_compiler_1/S_AXIS_DATA]
   connect_bd_intf_net -intf_net vin2_01_1 [get_bd_intf_ports vin2_01] [get_bd_intf_pins usp_rf_data_converter_0/vin2_01]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_FPD [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD] [get_bd_intf_pins ps8_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM1_FPD [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD] [get_bd_intf_pins ps8_0_axi_periph/S01_AXI]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins TLAST_GEN_0/s01_axis_aclk] [get_bd_pins TLAST_GEN_0/s00_axis_aclk] [get_bd_pins TLAST_GEN_0/m00_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins TLAST_GEN_0/s00_axis_aclk] [get_bd_pins TLAST_GEN_0/s01_axis_aclk] [get_bd_pins TLAST_GEN_0/m00_axis_aclk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins TLAST_GEN_0/s01_axis_aresetn] [get_bd_pins TLAST_GEN_0/s00_axis_aresetn] [get_bd_pins TLAST_GEN_0/m00_axis_aresetn] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn] [get_bd_pins TLAST_GEN_0/s00_axis_aresetn] [get_bd_pins TLAST_GEN_0/s01_axis_aresetn] [get_bd_pins TLAST_GEN_0/m00_axis_aresetn]
   connect_bd_net -net rst_ps8_0_99M_peripheral_aresetn [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins axi_smc/aresetn] [get_bd_pins ps8_0_axi_periph/S01_ARESETN]
   connect_bd_net -net sw_1 [get_bd_ports sw] [get_bd_pins TLAST_GEN_0/control]
   connect_bd_net -net usp_rf_data_converter_0_clk_adc2 [get_bd_pins usp_rf_data_converter_0/clk_adc2] [get_bd_pins clk_wiz_0/clk_in1]

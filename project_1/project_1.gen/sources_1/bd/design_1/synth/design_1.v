@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Sun Dec  1 14:06:46 2024
+//Date        : Mon Dec  9 15:54:34 2024
 //Host        : eecs-digital-22 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc2_clk_clk_n,
     adc2_clk_clk_p,
@@ -74,6 +74,12 @@ module design_1
   wire axis_data_fifo_0_M_AXIS_TVALID;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
+  wire [31:0]fir_compiler_0_M_AXIS_DATA_TDATA;
+  wire fir_compiler_0_M_AXIS_DATA_TREADY;
+  wire fir_compiler_0_M_AXIS_DATA_TVALID;
+  wire [31:0]fir_compiler_1_M_AXIS_DATA_TDATA;
+  wire fir_compiler_1_M_AXIS_DATA_TREADY;
+  wire fir_compiler_1_M_AXIS_DATA_TVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
   wire ps8_0_axi_periph_M00_AXI_ARREADY;
@@ -216,14 +222,14 @@ module design_1
         .m00_axis_tvalid(TLAST_GEN_0_M00_AXIS_TVALID),
         .s00_axis_aclk(clk_wiz_0_clk_out1),
         .s00_axis_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s00_axis_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
-        .s00_axis_tready(usp_rf_data_converter_0_m20_axis_TREADY),
-        .s00_axis_tvalid(usp_rf_data_converter_0_m20_axis_TVALID),
+        .s00_axis_tdata(fir_compiler_0_M_AXIS_DATA_TDATA),
+        .s00_axis_tready(fir_compiler_0_M_AXIS_DATA_TREADY),
+        .s00_axis_tvalid(fir_compiler_0_M_AXIS_DATA_TVALID),
         .s01_axis_aclk(clk_wiz_0_clk_out1),
         .s01_axis_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s01_axis_tdata(usp_rf_data_converter_0_m21_axis_TDATA),
-        .s01_axis_tready(usp_rf_data_converter_0_m21_axis_TREADY),
-        .s01_axis_tvalid(usp_rf_data_converter_0_m21_axis_TVALID));
+        .s01_axis_tdata(fir_compiler_1_M_AXIS_DATA_TDATA),
+        .s01_axis_tready(fir_compiler_1_M_AXIS_DATA_TREADY),
+        .s01_axis_tvalid(fir_compiler_1_M_AXIS_DATA_TVALID));
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(zynq_ultra_ps_e_0_pl_resetn0),
         .m_axi_s2mm_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -321,6 +327,22 @@ module design_1
        (.clk_in1(usp_rf_data_converter_0_clk_adc2),
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked));
+  design_1_fir_compiler_0_0 fir_compiler_0
+       (.aclk(clk_wiz_0_clk_out1),
+        .m_axis_data_tdata(fir_compiler_0_M_AXIS_DATA_TDATA),
+        .m_axis_data_tready(fir_compiler_0_M_AXIS_DATA_TREADY),
+        .m_axis_data_tvalid(fir_compiler_0_M_AXIS_DATA_TVALID),
+        .s_axis_data_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
+        .s_axis_data_tready(usp_rf_data_converter_0_m20_axis_TREADY),
+        .s_axis_data_tvalid(usp_rf_data_converter_0_m20_axis_TVALID));
+  design_1_fir_compiler_0_1 fir_compiler_1
+       (.aclk(clk_wiz_0_clk_out1),
+        .m_axis_data_tdata(fir_compiler_1_M_AXIS_DATA_TDATA),
+        .m_axis_data_tready(fir_compiler_1_M_AXIS_DATA_TREADY),
+        .m_axis_data_tvalid(fir_compiler_1_M_AXIS_DATA_TVALID),
+        .s_axis_data_tdata(usp_rf_data_converter_0_m21_axis_TDATA),
+        .s_axis_data_tready(usp_rf_data_converter_0_m21_axis_TREADY),
+        .s_axis_data_tvalid(usp_rf_data_converter_0_m21_axis_TVALID));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(clk_wiz_0_locked),
