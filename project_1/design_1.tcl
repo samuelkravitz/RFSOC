@@ -139,6 +139,7 @@ xilinx.com:ip:proc_sys_reset:5.0\
 xilinx.com:ip:axis_data_fifo:2.0\
 xilinx.com:ip:smartconnect:1.0\
 xilinx.com:ip:fir_compiler:7.2\
+user.org:user:split_square_sum:1.0\
 "
 
    set list_ips_missing ""
@@ -503,6 +504,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   set_property -dict [list \
     CONFIG.c_include_mm2s {0} \
     CONFIG.c_include_sg {0} \
+    CONFIG.c_s_axis_s2mm_tdata_width {64} \
     CONFIG.c_sg_length_width {23} \
   ] $axi_dma_0
 
@@ -556,8 +558,11 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   # Create instance: axis_data_fifo_0, and set properties
   set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 ]
   set_property -dict [list \
-    CONFIG.FIFO_DEPTH {4096} \
+    CONFIG.FIFO_DEPTH {32768} \
+    CONFIG.FIFO_MODE {1} \
+    CONFIG.HAS_TLAST {1} \
     CONFIG.IS_ACLK_ASYNC {1} \
+    CONFIG.TDATA_NUM_BYTES {8} \
   ] $axis_data_fifo_0
 
 
@@ -629,26 +634,47 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   24,   22,   20,   18,   17,   15,   13,   12,   10,   8,   7,   5,   4,   3,   1,   0,   -1,   -2,   -3,   -4,   -5,   -6,   -7,   -8,   -9,   -10,   -10,   -11,   -12,   -12,   -13,   -13,   -14,  \
 -14,   -15,   -15,   -15,   -16,   -16,   -16,   -16,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -17,   -16,   -16,   -16,   -16,   -16,   -15,   -15,   -15,\
   -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169} \
+    CONFIG.Coefficient_Fanout {false} \
     CONFIG.Coefficient_Fractional_Bits {0} \
     CONFIG.Coefficient_Sets {1} \
     CONFIG.Coefficient_Sign {Signed} \
     CONFIG.Coefficient_Structure {Inferred} \
     CONFIG.Coefficient_Width {16} \
     CONFIG.ColumnConfig {187} \
+    CONFIG.Control_Broadcast_Fanout {false} \
+    CONFIG.Control_Column_Fanout {false} \
+    CONFIG.Control_LUT_Pipeline {false} \
+    CONFIG.Control_Path_Fanout {false} \
     CONFIG.DATA_Has_TLAST {Not_Required} \
+    CONFIG.Data_Path_Broadcast {false} \
+    CONFIG.Data_Path_Fanout {false} \
     CONFIG.Data_Sign {Signed} \
     CONFIG.Data_Width {14} \
+    CONFIG.Disable_Half_Band_Centre_Tap {false} \
     CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+    CONFIG.Has_ACLKEN {false} \
+    CONFIG.Has_ARESETn {false} \
     CONFIG.M_DATA_Has_TREADY {true} \
+    CONFIG.No_BRAM_Read_First_Mode {false} \
+    CONFIG.No_SRL_Attributes {false} \
+    CONFIG.Optimal_Column_Lengths {false} \
+    CONFIG.Optimization_Goal {Area} \
+    CONFIG.Optimization_List {None} \
+    CONFIG.Optimization_Selection {None} \
+    CONFIG.Other {false} \
     CONFIG.Output_Rounding_Mode {Full_Precision} \
     CONFIG.Output_Width {30} \
+    CONFIG.Pre_Adder_Pipeline {false} \
     CONFIG.Quantization {Integer_Coefficients} \
     CONFIG.Sample_Frequency {147.456} \
   ] $fir_compiler_1
 
 
+  # Create instance: split_square_sum_0, and set properties
+  set split_square_sum_0 [ create_bd_cell -type ip -vlnv user.org:user:split_square_sum:1.0 split_square_sum_0 ]
+
   # Create interface connections
-  connect_bd_intf_net -intf_net TLAST_GEN_0_M00_AXIS [get_bd_intf_pins TLAST_GEN_0/M00_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+  connect_bd_intf_net -intf_net TLAST_GEN_0_M00_AXIS [get_bd_intf_pins TLAST_GEN_0/M00_AXIS] [get_bd_intf_pins split_square_sum_0/S00_AXIS]
   connect_bd_intf_net -intf_net adc2_clk_1 [get_bd_intf_ports adc2_clk] [get_bd_intf_pins usp_rf_data_converter_0/adc2_clk]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins axi_smc/S00_AXI]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
@@ -657,6 +683,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net fir_compiler_1_M_AXIS_DATA [get_bd_intf_pins fir_compiler_1/M_AXIS_DATA] [get_bd_intf_pins TLAST_GEN_0/S01_AXIS]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M00_AXI [get_bd_intf_pins ps8_0_axi_periph/M00_AXI] [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M01_AXI [get_bd_intf_pins ps8_0_axi_periph/M01_AXI] [get_bd_intf_pins usp_rf_data_converter_0/s_axi]
+  connect_bd_intf_net -intf_net split_square_sum_0_M00_AXIS [get_bd_intf_pins split_square_sum_0/M00_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
   connect_bd_intf_net -intf_net sysref_in_1 [get_bd_intf_ports sysref_in] [get_bd_intf_pins usp_rf_data_converter_0/sysref_in]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_m20_axis [get_bd_intf_pins usp_rf_data_converter_0/m20_axis] [get_bd_intf_pins fir_compiler_0/S_AXIS_DATA]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_m21_axis [get_bd_intf_pins usp_rf_data_converter_0/m21_axis] [get_bd_intf_pins fir_compiler_1/S_AXIS_DATA]
@@ -665,9 +692,9 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM1_FPD [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD] [get_bd_intf_pins ps8_0_axi_periph/S01_AXI]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins TLAST_GEN_0/s00_axis_aclk] [get_bd_pins TLAST_GEN_0/s01_axis_aclk] [get_bd_pins TLAST_GEN_0/m00_axis_aclk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins TLAST_GEN_0/s00_axis_aclk] [get_bd_pins TLAST_GEN_0/s01_axis_aclk] [get_bd_pins TLAST_GEN_0/m00_axis_aclk] [get_bd_pins split_square_sum_0/m00_axis_aclk] [get_bd_pins split_square_sum_0/s00_axis_aclk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn] [get_bd_pins TLAST_GEN_0/s00_axis_aresetn] [get_bd_pins TLAST_GEN_0/s01_axis_aresetn] [get_bd_pins TLAST_GEN_0/m00_axis_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn] [get_bd_pins TLAST_GEN_0/s00_axis_aresetn] [get_bd_pins TLAST_GEN_0/s01_axis_aresetn] [get_bd_pins TLAST_GEN_0/m00_axis_aresetn] [get_bd_pins split_square_sum_0/m00_axis_aresetn] [get_bd_pins split_square_sum_0/s00_axis_aresetn]
   connect_bd_net -net rst_ps8_0_99M_peripheral_aresetn [get_bd_pins rst_ps8_0_99M/peripheral_aresetn] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins axi_smc/aresetn] [get_bd_pins ps8_0_axi_periph/S01_ARESETN]
   connect_bd_net -net sw_1 [get_bd_ports sw] [get_bd_pins TLAST_GEN_0/control]
   connect_bd_net -net usp_rf_data_converter_0_clk_adc2 [get_bd_pins usp_rf_data_converter_0/clk_adc2] [get_bd_pins clk_wiz_0/clk_in1]

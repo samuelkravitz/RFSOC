@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -106,12 +105,8 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 6
   set_param bd.open.in_stealth_mode 1
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu48dr-ffvg1517-2-e
@@ -122,7 +117,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/skravitz/RFSOC/project_1/project_1.cache/wt [current_project]
   set_property parent.project_path /home/skravitz/RFSOC/project_1/project_1.xpr [current_project]
-  set_property ip_repo_paths /home/skravitz/RFSOC/ip_repo/TLAST_GEN_1_0 [current_project]
+  set_property ip_repo_paths {
+  /home/skravitz/RFSOC/ip_repo/split_square_sum_1_0
+  /home/skravitz/RFSOC/ip_repo/TLAST_GEN_1_0
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo /home/skravitz/RFSOC/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

@@ -34,7 +34,8 @@
       "rst_ps8_0_99M": "",
       "axi_smc": "",
       "fir_compiler_0": "",
-      "fir_compiler_1": ""
+      "fir_compiler_1": "",
+      "split_square_sum_0": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -1039,6 +1040,9 @@
           "c_include_sg": {
             "value": "0"
           },
+          "c_s_axis_s2mm_tdata_width": {
+            "value": "64"
+          },
           "c_sg_length_width": {
             "value": "23"
           }
@@ -1113,7 +1117,7 @@
       },
       "TLAST_GEN_0": {
         "vlnv": "user.org:user:TLAST_GEN:1.0",
-        "ip_revision": "7",
+        "ip_revision": "9",
         "xci_name": "design_1_TLAST_GEN_0_0",
         "xci_path": "ip/design_1_TLAST_GEN_0_0/design_1_TLAST_GEN_0_0.xci",
         "inst_hier_path": "TLAST_GEN_0"
@@ -1186,10 +1190,19 @@
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
-            "value": "4096"
+            "value": "32768"
+          },
+          "FIFO_MODE": {
+            "value": "1"
+          },
+          "HAS_TLAST": {
+            "value": "1"
           },
           "IS_ACLK_ASYNC": {
             "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
           }
         },
         "interface_ports": {
@@ -1896,7 +1909,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "4"
+                "value": "8"
               },
               "NUM_READ_OUTSTANDING": {
                 "value": "2"
@@ -2024,6 +2037,9 @@
               "  -15,   -15,   -15,   -14,   -14,   -14,   -13,   -13,   -13,   -12,   -12,   -12,   -11,   -169"
             ]
           },
+          "Coefficient_Fanout": {
+            "value": "false"
+          },
           "Coefficient_Fractional_Bits": {
             "value": "0"
           },
@@ -2042,8 +2058,26 @@
           "ColumnConfig": {
             "value": "187"
           },
+          "Control_Broadcast_Fanout": {
+            "value": "false"
+          },
+          "Control_Column_Fanout": {
+            "value": "false"
+          },
+          "Control_LUT_Pipeline": {
+            "value": "false"
+          },
+          "Control_Path_Fanout": {
+            "value": "false"
+          },
           "DATA_Has_TLAST": {
             "value": "Not_Required"
+          },
+          "Data_Path_Broadcast": {
+            "value": "false"
+          },
+          "Data_Path_Fanout": {
+            "value": "false"
           },
           "Data_Sign": {
             "value": "Signed"
@@ -2051,17 +2085,50 @@
           "Data_Width": {
             "value": "14"
           },
+          "Disable_Half_Band_Centre_Tap": {
+            "value": "false"
+          },
           "Filter_Architecture": {
             "value": "Systolic_Multiply_Accumulate"
           },
+          "Has_ACLKEN": {
+            "value": "false"
+          },
+          "Has_ARESETn": {
+            "value": "false"
+          },
           "M_DATA_Has_TREADY": {
             "value": "true"
+          },
+          "No_BRAM_Read_First_Mode": {
+            "value": "false"
+          },
+          "No_SRL_Attributes": {
+            "value": "false"
+          },
+          "Optimal_Column_Lengths": {
+            "value": "false"
+          },
+          "Optimization_Goal": {
+            "value": "Area"
+          },
+          "Optimization_List": {
+            "value": "None"
+          },
+          "Optimization_Selection": {
+            "value": "None"
+          },
+          "Other": {
+            "value": "false"
           },
           "Output_Rounding_Mode": {
             "value": "Full_Precision"
           },
           "Output_Width": {
             "value": "30"
+          },
+          "Pre_Adder_Pipeline": {
+            "value": "false"
           },
           "Quantization": {
             "value": "Integer_Coefficients"
@@ -2070,13 +2137,20 @@
             "value": "147.456"
           }
         }
+      },
+      "split_square_sum_0": {
+        "vlnv": "user.org:user:split_square_sum:1.0",
+        "ip_revision": "3",
+        "xci_name": "design_1_split_square_sum_0_0",
+        "xci_path": "ip/design_1_split_square_sum_0_0/design_1_split_square_sum_0_0.xci",
+        "inst_hier_path": "split_square_sum_0"
       }
     },
     "interface_nets": {
       "TLAST_GEN_0_M00_AXIS": {
         "interface_ports": [
           "TLAST_GEN_0/M00_AXIS",
-          "axis_data_fifo_0/S_AXIS"
+          "split_square_sum_0/S00_AXIS"
         ]
       },
       "adc2_clk_1": {
@@ -2127,6 +2201,12 @@
           "usp_rf_data_converter_0/s_axi"
         ]
       },
+      "split_square_sum_0_M00_AXIS": {
+        "interface_ports": [
+          "split_square_sum_0/M00_AXIS",
+          "axis_data_fifo_0/S_AXIS"
+        ]
+      },
       "sysref_in_1": {
         "interface_ports": [
           "sysref_in",
@@ -2175,7 +2255,9 @@
           "fir_compiler_1/aclk",
           "TLAST_GEN_0/s00_axis_aclk",
           "TLAST_GEN_0/s01_axis_aclk",
-          "TLAST_GEN_0/m00_axis_aclk"
+          "TLAST_GEN_0/m00_axis_aclk",
+          "split_square_sum_0/m00_axis_aclk",
+          "split_square_sum_0/s00_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -2192,7 +2274,9 @@
           "usp_rf_data_converter_0/m2_axis_aresetn",
           "TLAST_GEN_0/s00_axis_aresetn",
           "TLAST_GEN_0/s01_axis_aresetn",
-          "TLAST_GEN_0/m00_axis_aresetn"
+          "TLAST_GEN_0/m00_axis_aresetn",
+          "split_square_sum_0/m00_axis_aresetn",
+          "split_square_sum_0/s00_axis_aresetn"
         ]
       },
       "rst_ps8_0_99M_peripheral_aresetn": {

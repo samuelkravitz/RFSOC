@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Mon Dec  9 15:54:57 2024
+| Date         : Mon Dec  9 20:34:07 2024
 | Host         : eecs-digital-22 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_TLAST_GEN_0_0_utilization_synth.rpt -pb design_1_TLAST_GEN_0_0_utilization_synth.pb
 | Design       : design_1_TLAST_GEN_0_0
@@ -32,13 +32,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |   47 |     0 |          0 |    425280 |  0.01 |
-|   LUT as Logic          |   47 |     0 |          0 |    425280 |  0.01 |
+| CLB LUTs*               |   69 |     0 |          0 |    425280 |  0.02 |
+|   LUT as Logic          |   69 |     0 |          0 |    425280 |  0.02 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |   68 |     0 |          0 |    850560 | <0.01 |
-|   Register as Flip Flop |   68 |     0 |          0 |    850560 | <0.01 |
+| CLB Registers           |   84 |     0 |          0 |    850560 | <0.01 |
+|   Register as Flip Flop |   84 |     0 |          0 |    850560 | <0.01 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |    6 |     0 |          0 |     53160 |  0.01 |
+| CARRY8                  |   14 |     0 |          0 |     53160 |  0.03 |
 | F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
@@ -63,7 +63,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 68    |          Yes |       Reset |            - |
+| 84    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -164,14 +164,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   68 |            Register |
-| LUT4     |   30 |                 CLB |
-| LUT6     |   10 |                 CLB |
-| LUT5     |    6 |                 CLB |
-| CARRY8   |    6 |                 CLB |
-| LUT3     |    4 |                 CLB |
-| LUT2     |    3 |                 CLB |
+| FDRE     |   84 |            Register |
+| LUT6     |   33 |                 CLB |
+| LUT4     |   31 |                 CLB |
+| CARRY8   |   14 |                 CLB |
+| LUT5     |    5 |                 CLB |
 | LUT1     |    2 |                 CLB |
+| LUT3     |    1 |                 CLB |
+| LUT2     |    1 |                 CLB |
 +----------+------+---------------------+
 
 

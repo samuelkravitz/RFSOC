@@ -164,7 +164,7 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../project_1.gen/so
 "../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_rst_cnt.v" \
 "../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clk_detection.v" \
 "../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.v" \
-"../../../bd/design_1/ipshared/ee28/hdl/TLAST_GEN.v" \
+"../../../bd/design_1/ipshared/634d/hdl/TLAST_GEN.v" \
 "../../../bd/design_1/ip/design_1_TLAST_GEN_0_0/sim/design_1_TLAST_GEN_0_0.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
@@ -277,6 +277,10 @@ vcom -work fir_compiler_v7_2_22 -64 -93  \
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_fir_compiler_0_0/sim/design_1_fir_compiler_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_fir_compiler_0_1/sim/design_1_fir_compiler_0_1.vhd" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/b0b4/hdl/split_square_sum.v" \
+"../../../bd/design_1/ip/design_1_split_square_sum_0_0/sim/design_1_split_square_sum_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_31 -64 -incr -mfcu  "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../project_1.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

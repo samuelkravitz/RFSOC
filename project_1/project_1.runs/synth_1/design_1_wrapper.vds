@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  9 15:55:36 2024
-# Process ID: 196251
+# Start of session at: Tue Dec 10 11:15:27 2024
+# Process ID: 22872
 # Current directory: /home/skravitz/RFSOC/project_1/project_1.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/skravitz/RFSOC/project_1/project_1.runs/synth_1/design_1_wrapper.vds
@@ -13,16 +13,17 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
-# CPU Frequency     :2159.461 MHz
+# CPU Frequency     :2390.860 MHz
 # CPU Physical cores:16
 # CPU Logical cores :24
 # Host memory       :33325 MB
 # Swap memory       :8589 MB
 # Total Virtual     :41915 MB
-# Available Virtual :33582 MB
+# Available Virtual :37517 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/RFSOC/ip_repo/split_square_sum_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/skravitz/RFSOC/ip_repo/TLAST_GEN_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
 Command: read_checkpoint -auto_incremental -incremental /home/skravitz/RFSOC/project_1/project_1.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
@@ -37,90 +38,92 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 196300
+INFO: [Synth 8-7075] Helper process launched with PID 22922
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2829.145 ; gain = 353.801 ; free physical = 16406 ; free virtual = 29976
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2829.062 ; gain = 352.715 ; free physical = 21074 ; free virtual = 33715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:37]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_TLAST_GEN_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_TLAST_GEN_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_TLAST_GEN_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_TLAST_GEN_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:233]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:233]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:233]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 43 connections declared, but only 40 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:233]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:313]
-WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'design_1_axis_data_fifo_0_0' has 13 connections declared, but only 12 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:313]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_fir_compiler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_fir_compiler_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_fir_compiler_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_fir_compiler_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:346]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:346]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:346]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:346]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:346]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:630]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1412]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1412]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1537]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1537]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1669]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1669]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:2079]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:2079]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1371]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1371]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1371]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:630]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_99M_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_99M_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:471]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:471]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:471]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:471]
-WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'design_1_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:471]
-INFO: [Synth 8-6157] synthesizing module 'design_1_usp_rf_data_converter_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_usp_rf_data_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_usp_rf_data_converter_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_usp_rf_data_converter_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'irq' of module 'design_1_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:478]
-WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'design_1_usp_rf_data_converter_0_0' has 35 connections declared, but only 34 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:478]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-196251-eecs-digital-22/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_arready' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_rdata' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_rresp' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_rlast' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'saxigp2_rvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 127 connections declared, but only 114 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:513]
+INFO: [Synth 8-6157] synthesizing module 'design_1_TLAST_GEN_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_TLAST_GEN_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_TLAST_GEN_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_TLAST_GEN_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:238]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:238]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:238]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 43 connections declared, but only 40 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:238]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:318]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'design_1_axis_data_fifo_0_0' has 13 connections declared, but only 12 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:318]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_fir_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_fir_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_fir_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_fir_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:351]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:650]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1432]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1432]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1557]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1557]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1689]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1689]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:2099]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:2099]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1391]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1391]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1391]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:650]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_99M_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_99M_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_rst_ps8_0_99M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:476]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:476]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:476]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:476]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'design_1_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:476]
+INFO: [Synth 8-6157] synthesizing module 'design_1_split_square_sum_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_split_square_sum_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_split_square_sum_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_split_square_sum_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_usp_rf_data_converter_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_usp_rf_data_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_usp_rf_data_converter_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_usp_rf_data_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'irq' of module 'design_1_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:498]
+WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'design_1_usp_rf_data_converter_0_0' has 35 connections declared, but only 34 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:498]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/.Xil/Vivado-22872-eecs-digital-22/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_arready' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_rdata' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_rresp' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_rlast' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'saxigp2_rvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 127 connections declared, but only 114 given [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:533]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_KGUFR9 is either unconnected or has no load
@@ -136,18 +139,18 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_QJIMLI is eith
 WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_QJIMLI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_QJIMLI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2896.113 ; gain = 420.770 ; free physical = 16322 ; free virtual = 29892
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2896.031 ; gain = 419.684 ; free physical = 20989 ; free virtual = 33632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2905.020 ; gain = 429.676 ; free physical = 16322 ; free virtual = 29892
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2904.938 ; gain = 428.590 ; free physical = 20989 ; free virtual = 33631
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2905.020 ; gain = 429.676 ; free physical = 16322 ; free virtual = 29892
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2904.938 ; gain = 428.590 ; free physical = 20989 ; free virtual = 33631
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2905.020 ; gain = 0.000 ; free physical = 16322 ; free virtual = 29892
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2904.938 ; gain = 0.000 ; free physical = 20995 ; free virtual = 33638
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -184,6 +187,8 @@ Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/desi
 Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0_in_context.xdc] for cell 'design_1_i/fir_compiler_0'
 Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/design_1_fir_compiler_0_1/design_1_fir_compiler_0_0_in_context.xdc] for cell 'design_1_i/fir_compiler_1'
 Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_1/design_1_fir_compiler_0_1/design_1_fir_compiler_0_0_in_context.xdc] for cell 'design_1_i/fir_compiler_1'
+Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_split_square_sum_0_0/design_1_split_square_sum_0_0/design_1_split_square_sum_0_0_in_context.xdc] for cell 'design_1_i/split_square_sum_0'
+Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_split_square_sum_0_0/design_1_split_square_sum_0_0/design_1_split_square_sum_0_0_in_context.xdc] for cell 'design_1_i/split_square_sum_0'
 Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.srcs/constrs_1/new/base.xdc]
 Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.srcs/constrs_1/new/base.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/skravitz/RFSOC/project_1/project_1.srcs/constrs_1/new/base.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -192,15 +197,15 @@ Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/dont_tou
 Finished Parsing XDC File [/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2979.652 ; gain = 0.000 ; free physical = 16305 ; free virtual = 29875
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2979.570 ; gain = 0.000 ; free physical = 20984 ; free virtual = 33627
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2979.652 ; gain = 0.000 ; free physical = 16305 ; free virtual = 29875
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2979.570 ; gain = 0.000 ; free physical = 20984 ; free virtual = 33627
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2979.652 ; gain = 504.309 ; free physical = 16306 ; free virtual = 29877
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2979.570 ; gain = 503.223 ; free physical = 20981 ; free virtual = 33623
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -208,7 +213,7 @@ Start Loading Part and Timing Information
 Loading part: xczu48dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.656 ; gain = 512.312 ; free physical = 16306 ; free virtual = 29877
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.574 ; gain = 511.227 ; free physical = 20981 ; free virtual = 33623
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -243,11 +248,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_99M. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_compiler_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_compiler_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/split_square_sum_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.656 ; gain = 512.312 ; free physical = 16306 ; free virtual = 29877
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.574 ; gain = 511.227 ; free physical = 20981 ; free virtual = 33623
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.656 ; gain = 512.312 ; free physical = 16306 ; free virtual = 29878
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.574 ; gain = 511.227 ; free physical = 20981 ; free virtual = 33624
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -274,25 +280,25 @@ WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_ps8_0_axi_periph_0 i
 WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.656 ; gain = 512.312 ; free physical = 16309 ; free virtual = 29885
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2987.574 ; gain = 511.227 ; free physical = 20977 ; free virtual = 33625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3354.906 ; gain = 879.562 ; free physical = 16003 ; free virtual = 29579
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3354.762 ; gain = 878.414 ; free physical = 20654 ; free virtual = 33302
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3354.906 ; gain = 879.562 ; free physical = 16003 ; free virtual = 29579
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3354.762 ; gain = 878.414 ; free physical = 20654 ; free virtual = 33302
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3365.922 ; gain = 890.578 ; free physical = 15995 ; free virtual = 29571
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3365.777 ; gain = 889.430 ; free physical = 20647 ; free virtual = 33294
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -310,37 +316,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -364,8 +370,9 @@ Report BlackBoxes:
 |12    |design_1_auto_ds_1                 |         1|
 |13    |design_1_auto_pc_1                 |         1|
 |14    |design_1_rst_ps8_0_99M_0           |         1|
-|15    |design_1_usp_rf_data_converter_0_0 |         1|
-|16    |design_1_zynq_ultra_ps_e_0_0       |         1|
+|15    |design_1_split_square_sum_0_0      |         1|
+|16    |design_1_usp_rf_data_converter_0_0 |         1|
+|17    |design_1_zynq_ultra_ps_e_0_0       |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
@@ -382,36 +389,37 @@ Report Cell Usage:
 |10    |design_1_fir_compiler_0          |     2|
 |12    |design_1_proc_sys_reset_0        |     1|
 |13    |design_1_rst_ps8_0_99M           |     1|
-|14    |design_1_usp_rf_data_converter_0 |     1|
-|15    |design_1_xbar                    |     1|
-|16    |design_1_zynq_ultra_ps_e_0       |     1|
-|17    |IBUF                             |     4|
+|14    |design_1_split_square_sum_0      |     1|
+|15    |design_1_usp_rf_data_converter_0 |     1|
+|16    |design_1_xbar                    |     1|
+|17    |design_1_zynq_ultra_ps_e_0       |     1|
+|18    |IBUF                             |     4|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3380.766 ; gain = 830.789 ; free physical = 15989 ; free virtual = 29565
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3380.766 ; gain = 905.422 ; free physical = 15989 ; free virtual = 29565
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3379.652 ; gain = 828.672 ; free physical = 20647 ; free virtual = 33295
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3379.652 ; gain = 903.305 ; free physical = 20647 ; free virtual = 33295
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3380.766 ; gain = 0.000 ; free physical = 16284 ; free virtual = 29860
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3379.652 ; gain = 0.000 ; free physical = 20831 ; free virtual = 33479
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.766 ; gain = 0.000 ; free physical = 16285 ; free virtual = 29862
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3379.652 ; gain = 0.000 ; free physical = 20839 ; free virtual = 33487
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
 
-Synth Design complete | Checksum: 4226b2d1
+Synth Design complete | Checksum: b8d5cebd
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+74 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 3380.766 ; gain = 1925.590 ; free physical = 16285 ; free virtual = 29862
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2573.833; main = 2428.904; forked = 352.455
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4203.703; main = 3334.473; forked = 1032.504
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.766 ; gain = 0.000 ; free physical = 16285 ; free virtual = 29862
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 3379.652 ; gain = 1924.473 ; free physical = 20839 ; free virtual = 33487
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2712.748; main = 2545.882; forked = 394.867
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4216.059; main = 3333.359; forked = 1035.941
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3379.652 ; gain = 0.000 ; free physical = 20840 ; free virtual = 33487
 INFO: [Common 17-1381] The checkpoint '/home/skravitz/RFSOC/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 15:55:58 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 10 11:15:49 2024...

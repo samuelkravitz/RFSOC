@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Mon Dec  9 15:54:34 2024
+//Date        : Tue Dec 10 11:14:39 2024
 //Host        : eecs-digital-22 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=17,numNonXlnxBlks=2,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=1,da_clkrst_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc2_clk_clk_n,
     adc2_clk_clk_p,
@@ -45,10 +45,10 @@ module design_1
   wire axi_dma_0_M_AXI_S2MM_BREADY;
   wire [1:0]axi_dma_0_M_AXI_S2MM_BRESP;
   wire axi_dma_0_M_AXI_S2MM_BVALID;
-  wire [31:0]axi_dma_0_M_AXI_S2MM_WDATA;
+  wire [63:0]axi_dma_0_M_AXI_S2MM_WDATA;
   wire axi_dma_0_M_AXI_S2MM_WLAST;
   wire axi_dma_0_M_AXI_S2MM_WREADY;
-  wire [3:0]axi_dma_0_M_AXI_S2MM_WSTRB;
+  wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
   wire [48:0]axi_smc_M00_AXI_AWADDR;
   wire [1:0]axi_smc_M00_AXI_AWBURST;
@@ -68,7 +68,7 @@ module design_1
   wire axi_smc_M00_AXI_WREADY;
   wire [15:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
+  wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
@@ -115,6 +115,11 @@ module design_1
   wire [3:0]ps8_0_axi_periph_M01_AXI_WSTRB;
   wire [0:0]ps8_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
+  wire [63:0]split_square_sum_0_M00_AXIS_TDATA;
+  wire split_square_sum_0_M00_AXIS_TLAST;
+  wire split_square_sum_0_M00_AXIS_TREADY;
+  wire [7:0]split_square_sum_0_M00_AXIS_TSTRB;
+  wire split_square_sum_0_M00_AXIS_TVALID;
   wire [3:0]sw_1;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
@@ -267,7 +272,7 @@ module design_1
         .s_axi_lite_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
         .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
@@ -318,11 +323,11 @@ module design_1
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
         .s_axis_aclk(clk_wiz_0_clk_out1),
         .s_axis_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axis_tdata(TLAST_GEN_0_M00_AXIS_TDATA),
-        .s_axis_tlast(TLAST_GEN_0_M00_AXIS_TLAST),
-        .s_axis_tready(TLAST_GEN_0_M00_AXIS_TREADY),
-        .s_axis_tstrb(TLAST_GEN_0_M00_AXIS_TSTRB),
-        .s_axis_tvalid(TLAST_GEN_0_M00_AXIS_TVALID));
+        .s_axis_tdata(split_square_sum_0_M00_AXIS_TDATA),
+        .s_axis_tlast(split_square_sum_0_M00_AXIS_TLAST),
+        .s_axis_tready(split_square_sum_0_M00_AXIS_TREADY),
+        .s_axis_tstrb(split_square_sum_0_M00_AXIS_TSTRB),
+        .s_axis_tvalid(split_square_sum_0_M00_AXIS_TVALID));
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(usp_rf_data_converter_0_clk_adc2),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -475,6 +480,21 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_99M_peripheral_aresetn),
         .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
+  design_1_split_square_sum_0_0 split_square_sum_0
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .m00_axis_tdata(split_square_sum_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(split_square_sum_0_M00_AXIS_TLAST),
+        .m00_axis_tready(split_square_sum_0_M00_AXIS_TREADY),
+        .m00_axis_tstrb(split_square_sum_0_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(split_square_sum_0_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .s00_axis_tdata(TLAST_GEN_0_M00_AXIS_TDATA),
+        .s00_axis_tlast(TLAST_GEN_0_M00_AXIS_TLAST),
+        .s00_axis_tready(TLAST_GEN_0_M00_AXIS_TREADY),
+        .s00_axis_tstrb(TLAST_GEN_0_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(TLAST_GEN_0_M00_AXIS_TVALID));
   design_1_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.adc2_clk_n(adc2_clk_1_CLK_N),
         .adc2_clk_p(adc2_clk_1_CLK_P),

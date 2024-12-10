@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:TLAST_GEN:1.0
-// IP Revision: 7
+// IP Revision: 9
 
 (* X_CORE_INFO = "TLAST_GEN,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_TLAST_GEN_0_0,TLAST_GEN,{}" *)
